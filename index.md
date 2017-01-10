@@ -1,6 +1,6 @@
 ## __Esquisses__
 
-```{r, echo = TRUE}
+```{r}
 date()
 ```
 
