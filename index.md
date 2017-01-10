@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+### Esquisses
+
+This site hosts data and code for ongoing projects. Please consider all material to be in draft unless otherwise stated.
