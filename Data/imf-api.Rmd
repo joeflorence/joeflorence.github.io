@@ -1,0 +1,78 @@
+---
+title: "imf-api"
+author: "JF"
+date: "1/11/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This script explores a new package, 'imfr', which exists to download data from the International Monetary Fund's Data API
+
+NOTE: As of 10 January, 2017, I haven't been able to get this package to work. I get an error whenever running anything.
+
+Anyway, here's some code on the package, unevaluated for now.
+
+```{r imfr_test, eval=FALSE}
+# install.packages("imfr")
+library(imfr)
+
+real_ex <- imf_data(database_id = 'IFS', indicator = 'EREER_IX',
+                    country = c('CN', 'GB'), freq = 'A',
+                    start = 2013, end = current_year())
+
+all_iso2c() # Data frame of 253 ISO two letter country codes 
+
+imf_codelist("4", return_raw = TRUE, times = 3) # Retrieve the code list of codes 
+# (codelist) for an individual IMF database.
+
+imf_codes(codelist, return_raw = FALSE, times = 3) # Retrieve individual database codes
+
+imf_data() # Download data from the IMF
+
+imf_ids(return_raw = TRUE, times = 3) # Lists the IMF database IDs
+
+# Note that the IFS id is '4' and that there are about 75 different databases 
+# included here.
+```
+
+### IMF API Application
+
+Here I use IMF data to calculate the CIM measure discussed in Clague et al. (1999).
+
+Calculating CIM requires two variables, M2 (money supply) and C (currency held outside of banks). CIM is given as $(M2-C)/M2$.
+
+M2: Money and quasi money (M2) comprise the sum of currency outside banks, 
+demand deposits other than those of the central government, and the time, 
+savings, and foreign currency deposits of resident sectors other than the 
+central government. This definition of money supply is frequently called M2; it corresponds to lines 34 and 35 in the International Monetary Fund's 
+International Financial Statistics. Data are in current local currency.
+
+C: Currency held outside of banks, given in local currency.
+
+Note: Currency units are given in national currency
+
+Here's (unevaluated) code calculating the index.
+
+```{r cim, eval=FALSE}
+
+### Downloads the M2 variable for the countries of the world at an annual frequency
+
+library(imfr)
+imf_codelist(database_id = "4", return_raw = TRUE, times = 3)
+
+# Returns the codelist for indicators in the IMF IFS. Note that 'return_raw = FALSE' returns a data frame with codelist codes and descriptions.
+
+m2 <- imf_data(database_id = "4", indicator = "?", country = "all", start = 1960,
+  end = current_year(), freq = "A", return_raw = FALSE,
+  print_url = TRUE, times = 3)
+
+c <- imf_data(database_id = "4", indicator = "?", country = "all", start = 1960,
+  end = current_year(), freq = "A", return_raw = FALSE, print_url = TRUE, 
+  times = 3)
+
+cim <- (m2-c)/m2
+
+```
