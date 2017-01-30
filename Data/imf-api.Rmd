@@ -11,8 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This script explores a new package, 'imfr', which exists to download data from the International Monetary Fund's Data API
 
-NOTE: As of 10 January, 2017, I haven't been able to get this package to work. I get an error whenever running anything.
-
+NOTE: Version 1.3 fixed the errors from before
 Anyway, here's some code on the package, unevaluated for now.
 
 ```{r imfr_test, eval=FALSE}
@@ -25,10 +24,8 @@ real_ex <- imf_data(database_id = 'IFS', indicator = 'EREER_IX',
 
 all_iso2c() # Data frame of 253 ISO two letter country codes 
 
-imf_codelist("4", return_raw = TRUE, times = 3) # Retrieve the code list of codes 
+imf_codelist("IFS", return_raw = FALSE, times = 3) # Retrieve the code list of codes 
 # (codelist) for an individual IMF database.
-
-imf_codes(codelist, return_raw = FALSE, times = 3) # Retrieve individual database codes
 
 imf_data() # Download data from the IMF
 
@@ -61,15 +58,15 @@ Here's (unevaluated) code calculating the index.
 ### Downloads the M2 variable for the countries of the world at an annual frequency
 
 library(imfr)
-imf_codelist(database_id = "4", return_raw = TRUE, times = 3)
+imf_codelist(database_id = "IFS", return_raw = TRUE, times = 3)
 
 # Returns the codelist for indicators in the IMF IFS. Note that 'return_raw = FALSE' returns a data frame with codelist codes and descriptions.
 
-m2 <- imf_data(database_id = "4", indicator = "?", country = "all", start = 1960,
+m2 <- imf_data(database_id = "IFS", indicator = "?", country = "all", start = 1960,
   end = current_year(), freq = "A", return_raw = FALSE,
   print_url = TRUE, times = 3)
 
-c <- imf_data(database_id = "4", indicator = "?", country = "all", start = 1960,
+c <- imf_data(database_id = "IFS", indicator = "?", country = "all", start = 1960,
   end = current_year(), freq = "A", return_raw = FALSE, print_url = TRUE, 
   times = 3)
 
