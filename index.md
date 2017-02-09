@@ -6,7 +6,7 @@ I'm planning to use this site to host notes for ongoing project code. Please con
 
 Calculating the CIM from existing IMF data. Here's the link on [rpubs](http://rpubs.com/joeflorence/241082). 
 
-And [heres](https://rpubs.com/joeflorence/a) a map of Antartica.
+And [here's](https://rpubs.com/joeflorence/a) a map of Antartica.
 
 
 
