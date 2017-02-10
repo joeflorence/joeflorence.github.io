@@ -1,12 +1,14 @@
-## Esquisses
+## Esquisses (Notebooks)
 
 I'm planning to use this site to host notes for ongoing project code. Please consider all material to be in draft unless otherwise stated.
 
 #### Project 1
 
-Calculating the CIM from existing IMF data. Here's the link on [rpubs](http://rpubs.com/joeflorence/241082). 
+I'm interested in calculating a quantity known as 'contract intensive money' (CIM) from existing IMF data. Here's a link to the code on [rpubs](http://rpubs.com/joeflorence/241082). 
 
-And [here's](https://rpubs.com/joeflorence/a) a map of Antartica.
+And [here's](https://rpubs.com/joeflorence/a) a map of Antartica. 
+
+In other words, 
 
 Lorem ipsum dolor sit amet, vel wisi amet. Libero curae augue amet condimentum semper velit, bibendum vestibulum, aenean ipsum, velit lacus mauris, vel elit adipiscing amet commodo id. Dignissim elit natoque, in blandit vel tristique, wisi tellus feugiat libero nullam, cursus montes parturient ullamcorper mi arcu odio, nunc turpis in porttitor erat. Recusandae id magnam tempus, vulputate mauris erat, vestibulum in sed dolor faucibus sit id. Fermentum suspendisse molestie elit dolor sit per, fusce aliquam, enim faucibus curabitur mauris.
 

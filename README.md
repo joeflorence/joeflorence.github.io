@@ -1,7 +1,6 @@
 # joeflorence.github.io
-GitHub Pages
 
-Not much to see here. Just getting started with GitHub Pages.
+Not much to see here. Just getting started with the site material. In other words,
 
 Lorem ipsum dolor sit amet, vel wisi amet. Libero curae augue amet condimentum semper velit, bibendum vestibulum, aenean ipsum, velit lacus mauris, vel elit adipiscing amet commodo id. Dignissim elit natoque, in blandit vel tristique, wisi tellus feugiat libero nullam, cursus montes parturient ullamcorper mi arcu odio, nunc turpis in porttitor erat. Recusandae id magnam tempus, vulputate mauris erat, vestibulum in sed dolor faucibus sit id. Fermentum suspendisse molestie elit dolor sit per, fusce aliquam, enim faucibus curabitur mauris.
 
