@@ -1,14 +1,14 @@
-## Notebooks for Works in Progress
+s## Notebooks for Works in Progress
 
-I'm planning to use this site to host notes for ongoing project code. Please consider all material to be in draft unless otherwise stated.
+I'm planning to use this site to host notes for ongoing projects. Please consider all material to be in draft unless otherwise stated; do not cite without permission.
 
-#### Project 1: Example
+#### Project 1: Example!
 
 [Here's](https://rpubs.com/joeflorence/a) a map of Antartica. 
 
 #### Network Visualization
 
-I'm linking a network visualization here
+I'm linking a network visualization [here](https://github.com/joeflorence/network_graphic).
 
 #### And so forth
 
